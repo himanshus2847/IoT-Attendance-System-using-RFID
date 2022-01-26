@@ -20,7 +20,6 @@ MFRC522::MIFARE_Key key;
 ESP8266WiFiMulti WiFiMulti;
 MFRC522::StatusCode status;      
 
-/* Set the block to which we want to write data */
 /* Be aware of Sector Trailer Blocks */
 int blockNum = 2;  
 
@@ -29,7 +28,6 @@ int blockNum = 2;
 byte bufferLen = 18;
 byte readBlockData[18];
 
-bool readfromInternet = false;
 String data2;
 const String data1 = "https://script.google.com/macros/s/AKfycbwi5Lioy_QXdIw0Snh3x_9bsLDtOu2-nxgSBgGmj9k8DPO1j_g0-cM3N9PIgehlKRZN/exec?name=";
 

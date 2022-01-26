@@ -22,8 +22,8 @@ function doGet(e) {
       Logger.log(param + ':' + e.parameter[param]);
       switch (param) {
         case 'name':
-          rowData[2] = value; // Temperature in column C
-          result = 'Temperature Written on column C'; 
+          rowData[2] = value; // Employee Name in column C
+          result = 'Employee Name Written on column C'; 
           break;
         default:
           result = "unsupported parameter";

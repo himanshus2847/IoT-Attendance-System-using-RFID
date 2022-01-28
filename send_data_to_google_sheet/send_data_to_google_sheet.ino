@@ -57,7 +57,6 @@ void setup()
   pinMode(BUZZER, OUTPUT);
   /* Initialize SPI bus */
   SPI.begin();
-  data2.reserve(18);
 }
 
 void loop()
@@ -70,7 +69,6 @@ void loop()
   {
     return;
   }
-  Serial.println("Step 3");
   /* Select one of the cards */
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
@@ -78,7 +76,6 @@ void loop()
   }
   /* Read data from the same block */
   Serial.println();
-  Serial.println("Step 4");
   Serial.println(F("Reading last data from RFID..."));
   ReadDataFromBlock(blockNum, readBlockData);
   /* If you want to print the full memory dump, uncomment the next line */
